@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio dos Números</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="game">
+
+            <div class="topo">
+                <span class="badge"> 🎯DESAFIO</span>
+
+                <button id="tema">☀️</button>
+            </div>
+
+            <h1>
+                Adivinhe o <span>número!</span>
+            </h1>
+
+            <p class="subtitulo">
+                O computador escolheu um número secreto.
+                Você consegue descobrir?
+            </p>
+
+            <!-- ESTATÍSTICAS -->
+
+            <div class="estatisticas">
+
+                <div>
+                    <small>TENTATIVAS</small>
+                    <strong id="tentativas">0</strong>
+                </div>
+
+                <div>
+                    <small>MELHOR</small>
+                    <strong id="melhor">—</strong>
+                </div>
+
+                <div>
+                    <small>INTERVALO</small>
+                    <strong>1–100</strong>
+                </div>
+
+            </div>
+
+            <!-- NÚMERO -->
+
+            <div class="area-numero">
+
+                <div id="numeroSecreto" class="numero">
+                    ?
+                </div>
+
+                <p id="mensagem">
+                    Digite um número e comece o desafio!
+                </p>
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="entrada">
+
+                <input
+                    type="number"
+                    id="palpite"
+                    min="1"
+                    max="100"
+                    placeholder="Ex.: 42"
+                >
+
+                <button id="botao">
+                    Tentar
+                </button>
+
+            </div>
+
+            <!-- DICA -->
+
+            <div class="dica">
+
+                <span>💡</span>
+
+                <div>
+                    <strong>Dica</strong>
+
+                    <p id="textoDica">
+                        O número está entre 1 e 100.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- HISTÓRICO -->
+
+            <div class="historico">
+
+                <div class="tituloHistorico">
+
+                    <span>
+                        Últimos palpites
+                    </span>
+
+                    <button id="novoJogo">
+                        ↻ Novo jogo
+                    </button>
+
+                </div>
+
+                <div id="listaPalpites">
+
+                    <span class="vazio">
+                        Nenhum palpite ainda
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            Feito com HTML, CSS e JavaScript 🎮
+        </footer>
+
+    </main>
+
+
+    <!-- TELA DE VITÓRIA -->
+
+    <div id="modal" class="modal escondido">
+
+        <div class="modal-conteudo">
+
+            <div class="trofeu">
+                🏆
+            </div>
+
+            <h2>
+                Você acertou!
+            </h2>
+
+            <p id="textoVitoria"></p>
+
+            <button id="jogarNovamente">
+                Jogar novamente
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
